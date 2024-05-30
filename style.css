@@ -13,22 +13,22 @@ body {
 
 .grid {
   display: grid;
-  grid-column-gap: 20px;
-  grid-gap: 64px;
+  grid-gap: 20px;
 }
 .grid-2-columns {
   grid-template-columns: 1fr 1fr;
 }
 .grid-3-columns {
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.section {
-  padding: 100px 0;
+.grid-4-columns {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 section {
-  margin: 20px;
   padding: 20px;
 }
+
 header {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -37,16 +37,16 @@ header {
   background-size: cover;
   color: white;
   text-align: center;
-  padding: 150px 0;
+  padding: 100px 20px;
 }
 
 header h1 {
-  font-size: 70px;
+  font-size: 40px;
   line-height: 1.5;
 }
 
 header h2 {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.5;
 }
 
@@ -56,16 +56,16 @@ header h3 {
   letter-spacing: 5px;
 }
 
-header a {
-  font-size: 20px;
+header .hero-button {
+  font-size: 16px;
   line-height: 1.5;
   background-color: white;
   color: black;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 16px 20px;
+  padding: 10px 20px;
   font-weight: 200;
-  margin-top: 32px;
+  margin-top: 20px;
   display: inline-block;
 }
 
@@ -76,8 +76,8 @@ footer {
     url("images/london-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0;
-  font-size: 18px;
+  padding: 50px 20px;
+  font-size: 16px;
 }
 
 footer li {
@@ -87,7 +87,7 @@ footer li {
 }
 
 footer h4 {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -116,6 +116,20 @@ main p {
   margin: 0;
 }
 
+.main-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .image-container {
   width: 100%;
   display: flex;
@@ -123,18 +137,48 @@ main p {
   justify-content: center;
 }
 
-main img {
-  width: 600px;
+.card img,
+.image-container img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
 }
 
+.secondary-section {
+  text-align: center;
+}
+
+h5 {
+  font-size: 18px;
+}
+.gap {
+  margin-top: -25px;
+}
+
+.card {
+  border: 2px #c3c7d3 solid;
+}
+.celeb-button {
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-weight: 200;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
 @media (max-width: 960px) {
   header {
-    padding: 60px 0;
-    line-height: 1;
+    padding: 40px 20px;
+    line-height: 1.2;
     letter-spacing: 1px;
   }
   header h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   header h2 {
     font-size: 20px;
@@ -144,19 +188,17 @@ main img {
   }
   header a {
     font-size: 12px;
-    padding: 10px;
+    padding: 8px 16px;
   }
   .grid {
     grid-template-columns: 1fr;
   }
-  section {
-    padding: 30px;
-  }
-  main img {
-    width: 100%;
-  }
   .image-container {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
+  }
+  footer {
+    padding: 30px 20px;
+    font-size: 14px;
   }
 }
